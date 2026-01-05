@@ -1,4 +1,4 @@
-// binary search tree
+// binary tree without menu driven program
 
 #include <stdio.h>
 #include <stdlib.h>
