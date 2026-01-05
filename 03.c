@@ -1,3 +1,5 @@
+// heap sort with comments
+
 #include <stdio.h>
 
 /* Heapify a subtree rooted at index i

@@ -1,3 +1,5 @@
+// heap sort without comments
+
 #include<stdio.h>
 
 void Heapify(int arr[], int n, int i){
