@@ -43,7 +43,7 @@ void display(int arr[], int n){
 
 int main(){
     int arr[10],i,n;
-    printf("Enter the size of Array :");
+    printf("\nEnter the size of Array :");
     scanf("%d",&n);
 
     printf("Enter the elements : \n");
