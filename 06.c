@@ -13,3 +13,17 @@ break;rb
 restrictb
 break;restrictrs
 break;
+alignasvaegda
+
+shortg
+defaultg
+
+vsagd
+
+
+z
+gvb
+zg
+vb
+
+vbg
