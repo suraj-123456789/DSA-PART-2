@@ -5,3 +5,11 @@ gotoa
 gotobzb
 alignasdb
 __DEC_EVAL_METHOD__
+rgvrs
+break;__BASE_FILE__b
+rb
+registerrs
+break;rb
+restrictb
+break;restrictrs
+break;
