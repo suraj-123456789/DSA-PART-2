@@ -11,7 +11,7 @@ def game(you,computer):
         comp += 1
         print(f"computer :{comp}")
         print(f"you :{u}")
-    if(you == -1 and computer == 1):
+    elif(you == -1 and computer == 1):
         print("Paper beats Rock, you won!")
         u += 1
         print(f"computer :{comp}")
