@@ -4,13 +4,12 @@
 #define max 10
 #include"queue.h"
 
-void bfs(int a[max][max], int n){
+void bfs(int a[max][max], int n,int u){
     int visited[max] = {0};
-    int u,v;
+    int v;
     initqueue();
-    u = 0;
     visited[u] = 1;
-    enqueue(0);
+    enqueue(u);
     while(!IsQueueEmpty()){
         u = dequeue(); 
         printf("\tV%d",u+1);
@@ -23,16 +22,16 @@ void bfs(int a[max][max], int n){
     }
 }
 int main(){
-    int a[max][max], i, j, n;
+    int a[max][max], i, j, n, index;
 
     printf("\nEnter the no. of vertices :");
     scanf("%d",&n);
 
     if(n>max || n<=0){
         printf("Ivalid no. of vertices! max %d vertices are allowed.",max);
-        return 0;
+        return 1;
     }
-    printf("\nEnter a graph :");
+    printf("\nEnter a graph :\n");
     for(i=0; i<n; i++){
         for(j=0; j<n; j++){
             a[i][j] = 0;
@@ -52,8 +51,17 @@ int main(){
             printf("\t%d",a[i][j]);
         }
     }
+    printf("\n\nEnter starting vertex index (0 to %d): ", n-1);
+    scanf("%d", &index);
+
+    if (index < 0 || index >= n) {
+        printf("Invalid start index!\n");
+        return 1;
+    }
+
     printf("\nBfs traversal :\n");
-    bfs(a,n);
+    bfs(a,n,index);
+    return 0;
 }
 
 
