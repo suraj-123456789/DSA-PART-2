@@ -1,3 +1,5 @@
+// topological sort queue implementation
+
 #include<stdio.h>
 #define N 10
 int queue[N];

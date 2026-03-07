@@ -1,3 +1,5 @@
+// dfs traversal
+
 #include<stdio.h>
 #define max 10
 int visited[max] = {0};
