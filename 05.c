@@ -4,37 +4,38 @@
 #include<stdio.h>
 #define max 10
 
-void countdegrees(int m[max][max], int n){
+void countdegrees(int a[max][max], int n){
     int i, j, indegree = 0, outdegree = 0;
     for(i=0; i<n; i++){
         indegree = 0;
         outdegree = 0;
         for(j=0; j<n; j++){
-            indegree += m[j][i];
-            outdegree += m[i][j];
+            indegree += a[j][i];
+            outdegree += a[i][j];
         }
         printf("\nVertex %d has indegree : %d and outdegree : %d", i+1, indegree, outdegree);
     }
 }
-
 int main(){
-    int m[max][max], i, j, n;
+    int a[max][max], i, j, n;
 
-    printf("\nHow many nodes are there in graph :");
+    printf("Enter the no. of vertices :");
     scanf("%d",&n);
 
-    if(n > max || n <= 0){
-        printf("\nInvalid number of node, max allow %d no. of nodes\n",max);
+    if(n>10 || n<=0){
+        printf("\nInvalid no. vertices you can take vertices upto %d ",max);
         return 0;
     }
 
-    printf("\nEnter Graph :\n");
+    printf("\nEnter graph :");
     for(i=0; i<n; i++){
         for(j=0; j<n; j++){
-            m[i][j] = 0;
-            if(i != j){
-                printf("Is there is an egdge between v%d and v%d, (1 = yes) and (0 = no) :",i+1, j+1);
-                scanf("%d", &m[i][j]);
+            a[i][j] = 0;
+            if(i==j){
+                continue;
+            }else{
+                printf("Is there is an edge between v%d and v%d (1=Yes & 0=No) :",i+1,j+1);
+                scanf("%d",&a[i][j]);
             }
         }
     }
@@ -42,9 +43,9 @@ int main(){
     for(i=0; i<n; i++){
         printf("\n");
         for(j=0; j<n; j++){
-            printf("\t%d",m[i][j]);
+            printf("\t%d",a[i][j]);
         }
     }
-    countdegrees(m, n);
+    countdegrees(a, n);
 }
 

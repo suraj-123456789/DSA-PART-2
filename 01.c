@@ -10,6 +10,10 @@ struct node {
 };
 struct node* CreateNode(int value){
     struct node* newnode = (struct node*)malloc(sizeof(struct node));
+    if(newnode == NULL){
+        printf("Memory allocation failed\n");
+        exit(1);
+    }
     newnode->data = value;
     newnode->left = NULL; 
     newnode->right = NULL;
@@ -24,6 +28,9 @@ struct node* insert(struct node* root,int value){
     }
     else if (value > root->data){
         root->right = insert(root->right,value);
+    }
+    else{
+        printf("Duplication is not allowed.\n");
     }
     return root;
 }
@@ -58,9 +65,13 @@ int main(){
         printf("2. Display\n");
         printf("3. Exit\n");
         printf("\nEnter Your Choice :");
-        scanf("%d",&choice);
-
+        if (scanf("%d",&choice) != 1){
+            printf("Inavlid chice.\n");
+            while(getchar() != '\n');
+            continue;
+        }
         switch(choice){
+
             case 1:
                 printf("Enter the no. node : ");
                 scanf("%d",&n);
@@ -77,6 +88,7 @@ int main(){
             if(root != NULL){
                 printf("Preorder Traversal Of BST:");
                 preorder(root);
+                
                 printf("\nInorder Traversal Of BST:");
                 inorder(root);
 

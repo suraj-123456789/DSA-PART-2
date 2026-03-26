@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colors</title>
+    <style>
+    /* First paragraph in each div */
+    p:first-of-type {
+    background: yellow;
+    color: red;
+    }
+
+    /* All other paragraphs in divs */
+    p:not(:first-of-type) {
+    background: blue;
+    color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias neque minima, iusto laboriosam
+            perspiciatis aspernatur ab reiciendis inventore officiis quis eaque voluptate.</p>
+        <p>this is second para</p>
+        <p>this is third para</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias neque minima, iusto laboriosam
+            perspiciatis aspernatur ab reiciendis inventore officiis quis eaque voluptate.</p>
+        <p>this is second para</p>
+        <p>this is third para</p>
+    </div>
+</body>
+
+</html>

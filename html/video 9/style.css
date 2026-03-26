@@ -1,0 +1,21 @@
+/* id element example */
+#title{
+color:red;
+}
+
+/* class element example */
+.text{
+color:blue;
+}
+
+/* both together example */
+#heading{
+color:red;
+}
+
+.content{
+color:green;
+}
+#tittle{
+    color: purple;
+}

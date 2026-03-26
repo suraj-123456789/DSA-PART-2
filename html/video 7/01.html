@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="submit.php" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" placeholder="Enter Your Name">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="Email" placeholder="Enter Your Email" required>
+        </div>
+        <br>
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" maxlength="10">
+        </div>
+        <br>
+        <div>
+            <label for="tel">Telephone No.:</label>
+            <input type="tel" id="tel" name="mobile no." maxlength="10">
+        </div>
+        <br>
+        <div>
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <br>
+        <div>
+            <label>Hobbies:</label>
+            <input type="checkbox" id="hob" name="hobbies" value="reading">
+            <label for="hob">Reading</label>
+            <input type="checkbox" id="hobb" name="hobbies" value="music">
+            <label for="hobb">Music</label>
+            <input type="checkbox" id="hobby" name="hobbies" value="games">
+            <label for="hobby">Games</label>
+        </div>
+        <br>
+        <div>
+            <label>Course:</label>
+            <select name="course">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Message</label>
+            <br>
+            <textarea rows="3" cols="20" name="message" placeholder="message..."></textarea>
+        </div>
+        <br>
+        <div>
+            <button type="button">submit</button>
+        </div>
+    </form>
+</body>
+</html>

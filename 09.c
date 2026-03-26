@@ -3,7 +3,6 @@
 #include<stdio.h>
 #define max 10
 
-
 int main(){
     int a[max][max],indegree[max];
     int queue[max], front = 0, rear = -1;
@@ -14,10 +13,10 @@ int main(){
 
     if(n>10 || n<=0){
         printf("\nInvalid no. vertices you can take vertices upto %d ",max);
-        return -1;
+        return 0;
     }
 
-    printf("\nEnter graph :");
+    printf("\nEnter graph :\n");
     for(i=0; i<n; i++){
         for(j=0; j<n; j++){
             a[i][j] = 0;
@@ -44,10 +43,10 @@ int main(){
     }
     while(front<=rear){
         int u = queue[front++];
-        printf("v%d",u+1);
+        printf("v%d ",u+1);
         count++;
 
-        for(j=0; j<n; j++){ // this for is to reduse the indgree of vertex
+        for(j=0; j<n; j++){ // this for is to reduce the indgree of neigbour vertex
             if(a[u][j] == 1){
                 indegree[j]--;
                 if(indegree[j]==0){
