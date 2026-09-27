@@ -62,6 +62,20 @@ int main(){
     return 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. Create a Flask application with the following static routes:
 i) /
 ii) /about
